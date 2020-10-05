@@ -15,7 +15,8 @@ jobs:
     
     - name: Set Xcode Version
       run: |
-        echo '::set-env name=XCODE_VERSION::/Applications/Xcode_12_beta.app/Contents/Developer'
+        xcrun simctl list runtimes
+        echo '::set-env name=XCODE_VERSION::/Applications/Xcode_12.app/Contents/Developer'
         
     - name: Check Dependencies
       uses: actions/cache@v1
